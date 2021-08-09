@@ -617,6 +617,167 @@
 </ul>
 </li>
 </ul>
+<h3 id="数组的方法"><a href="#数组的方法" class="headerlink" title="数组的方法"></a>数组的方法</h3><ul>
+<li><p>1、pop()把数组的最后一项删除了</p>
+<ul>
+<li>返回值 就是被删除的 那一项数据</li>
+<li>会直接改变原数组                                </li>
+</ul>
+</li>
+<li><p>2、push()给数组的末尾添加一项</p>
+<ul>
+<li>参数就是要追加的数据</li>
+<li>返回值就是 改变后的数组的长度</li>
+<li>会改变原数组</li>
+</ul>
+</li>
+<li><p>3、shift()  删除数组的第 0 项</p>
+<ul>
+<li>返回值就是被删除的那一项</li>
+<li>会改变原数组</li>
+</ul>
+</li>
+<li><p>4、unshift()  向数组的开头添加一项数据</p>
+<ul>
+<li>返回值就是改变后的数组的长度</li>
+<li>会改变原数组 </li>
+</ul>
+</li>
+<li><p>5、indexOf()   检测数组里面有没有某一项数据</p>
+<ul>
+<li>返回值：有就返回对应的下标 没有就返回 -1 </li>
+<li>不会改变原数组</li>
+</ul>
+</li>
+<li><p>6、concat()   拼接数组</p>
+<ul>
+<li>参数:理论上是有无限个、也可拼接数组</li>
+<li>返回值：就是拼接以后的另外的数组</li>
+<li>不会改变原数组</li>
+</ul>
+</li>
+<li><p>7、join()  加入  可以把一个数组转为 字符串  用你传入的符号 把数组的每一项拼接起来</p>
+<ul>
+<li>返回值就是 拼接好的另外的数组</li>
+<li>不会改变原数组</li>
+</ul>
+</li>
+<li><p>8、reverse()   反转 把一个数组 颠倒过来</p>
+<ul>
+<li>返回值就是改变后的新数组</li>
+<li>直接改变原数组</li>
+</ul>
+</li>
+<li><p>9、sort()   排序 </p>
+<ul>
+<li>语法:数组.sort()   sort 方法接收一个参数 这个参数是一个函数<ul>
+<li>return a - b  升序</li>
+<li>return b - a  降序</li>
+</ul>
+</li>
+<li>返回值 就是排序好的数组</li>
+<li>直接改变原数组</li>
+</ul>
+</li>
+<li><p>10、splice()   截取数据</p>
+<ul>
+<li>语法：数组.splice(开始截取的位置,截取的个数)</li>
+<li>第三个参数 就是把截取掉的数据替换了</li>
+<li>返回值：截取的数组组成的一个新的数组</li>
+<li>直接改变原数组</li>
+</ul>
+</li>
+<li><p>11、forEach(function(item,index,source){})</p>
+<ul>
+<li>参数是一个函数 ，这个函数有三个参数</li>
+<li>第一个就是数组的每一项  第二个参数就是索引  第三个参数就是 原始数据</li>
+<li>没有返回值</li>
+<li>forEach 有的时候会改变原始数据有的时候不会改变</li>
+</ul>
+</li>
+<li><p>12、map(function(item,index,source){})</p>
+<ul>
+<li>参数是一个函数，这个函数有三个参数 </li>
+<li>第一个就是数组的每一项  第二个参数就是索引  第三个参数就是 原始数据</li>
+<li>这个函数里面要写 return return 后面跟的东西就是这个新的数组里面的每一项</li>
+<li>返回值 是一个新的数组</li>
+<li>当数组中元素是值类型，map不会改变原数组；当是引用类型，则可以改变原数组</li>
+</ul>
+</li>
+<li><p>13、filter(function(item,index,source){})</p>
+<ul>
+<li>参数是一个函数，这个函数有三个参数</li>
+<li>第一个就是数组的每一项  第二个参数就是索引  第三个参数就是 原始数据</li>
+<li>返回值是一个新的数组 里面是满足条件的每一项</li>
+<li>不会改变原数组</li>
+</ul>
+</li>
+<li><p>14、every(function(item,index,source){})</p>
+<ul>
+<li>参数是一个函数，这个函数有三个参数</li>
+<li>第一个就是数组的每一项  第二个参数就是索引  第三个参数就是 原始数据</li>
+<li>每一项都满足条件 就返回 true 否则 false</li>
+</ul>
+</li>
+<li><p>15、some(function(item,index,source){})</p>
+<ul>
+<li>参数是一个函数 ，这个函数有三个参数</li>
+<li>第一个就是数组的每一项  第二个参数就是索引  第三个参数就是 原始数据</li>
+<li>检测数组里面有没符合条件的项 return 后面写的就是条件</li>
+<li>只要数组里面有一个满足条件了 最后的返回值就是 true 只有所有的都不满足条件 就返回 false</li>
+<li>返回值是一个布尔值</li>
+</ul>
+</li>
+</ul>
+<h3 id="字符串的方法"><a href="#字符串的方法" class="headerlink" title="字符串的方法"></a>字符串的方法</h3><ul>
+<li><p>1、substring()  截取</p>
+<ul>
+<li>第一个参数是开始截取的位置 第二个参数是结束截取的位置  包前不包后</li>
+<li>不会改变原始数据</li>
+</ul>
+</li>
+<li><p>2、substr()  截取字符串</p>
+<ul>
+<li>第一个参数是开始截取的位置 第二个参数是截取的个数</li>
+<li>不会改变原始数据</li>
+</ul>
+</li>
+<li><p>3、toLowerCase()  把大写字符串转为 小写字母</p>
+<ul>
+<li>不会改变原始数据</li>
+</ul>
+</li>
+<li><p>4、toUpperCase()  把小写字符串转为 大写字母</p>
+<ul>
+<li>不会改变原始数据</li>
+</ul>
+</li>
+<li><p>5、<strong>indexOf()</strong>  检测字符串里面有没有某一个字符**</p>
+<ul>
+<li>返回值 有的话就返回下标 没有就返回 -1</li>
+<li>不会改变原始数据</li>
+</ul>
+</li>
+<li><p>6、charAt()   用来查询对应下标的字符</p>
+<ul>
+<li>参数就是一个索引</li>
+<li>返回值 对应的字符 </li>
+<li>不会改变原始数据</li>
+</ul>
+</li>
+<li><p>7、charCodeAt()  用来查询对应下标字符的编码</p>
+</li>
+<li><p>8、<strong>split()</strong>  以一个特定的符号把一个字符串分割成数组 </p>
+<ul>
+<li>如果参数是一个空字符串 那就是每一个字符都分隔开</li>
+</ul>
+</li>
+<li><p>9、<strong>replace()</strong>   替换</p>
+<ul>
+<li>第一个参数就是要被替换的字符 第二个参数就是要用什么字符来替换</li>
+</ul>
+</li>
+</ul>
 <h3 id="跨域问题的解决办法"><a href="#跨域问题的解决办法" class="headerlink" title="跨域问题的解决办法"></a>跨域问题的解决办法</h3><p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000011145364">https://segmentfault.com/a/1190000011145364</a></p>
 <p><strong>同源策略</strong>/SOP（Same origin policy）是一种约定，由Netscape公司1995年引入浏览器，它是浏览器最核心也最基本的安全功能，如果缺少了同源策略，浏览器很容易受到XSS、CSFR等攻击。所谓同源是指**”协议+域名+端口”**三者相同，即便两个不同的域名指向同一个ip地址，也非同源。</p>
 <ul>
@@ -892,6 +1053,29 @@
 <li>第一个参数是 this 指向</li>
 <li>不会立即调用函数 会返回一个已经改变了 this 指向的新的函数</li>
 <li>fn.bind(obj)</li>
+</ul>
+</li>
+</ul>
+<h3 id="三大系列"><a href="#三大系列" class="headerlink" title="三大系列"></a>三大系列</h3><ul>
+<li>client<ul>
+<li>clientWidth    clientHeight    获取的是元素 内容 + padding</li>
+<li>clientLeft    clientTop    获取的是元素左边框和上边框的宽度</li>
+<li>clientX    clientY    光标到可视窗口左边和上边的距离</li>
+</ul>
+</li>
+<li>offset<ul>
+<li>offsetWidth offsetHeight    获取的是元素内容 + padding + border</li>
+<li>offsetLeft   offsetTop<ul>
+<li>没有定位  元素相对于 页面 左边和上边的距离</li>
+<li>有定位  元素相对于 有定位的父级元素左边和上边的距离</li>
+</ul>
+</li>
+<li>offsetX  offsetY  光标到当前元素左边和上边的距离</li>
+<li>offsetParent   有定位的父元素</li>
+</ul>
+</li>
+<li>page<ul>
+<li>pageX pageY   光标到页面左边和上边的距离</li>
 </ul>
 </li>
 </ul>
@@ -1217,14 +1401,15 @@
 <li>constructor()</li>
 <li>componentWillMount()</li>
 <li>render()</li>
-<li>componentDidMount()</li>
+<li>componentDidMount() 1</li>
 </ul>
 </li>
 <li>更新阶段：<ul>
+<li>componentWillReceiveProps()</li>
 <li>shouldComponentUpdate()</li>
 <li>componentWillUpdate()</li>
 <li>render()</li>
-<li>componentDidUpdate()</li>
+<li>componentDidUpdate() 1</li>
 </ul>
 </li>
 <li>销毁阶段：<ul>
@@ -1261,6 +1446,12 @@
 <li>render 方法</li>
 <li>setState 更新函数 (第一个参数）</li>
 <li>静态的 getDerivedStateFromProps 生命周期方法</li>
+</ul>
+<h3 id="关于-react中setState是同步的还是异步"><a href="#关于-react中setState是同步的还是异步" class="headerlink" title="关于 react中setState是同步的还是异步"></a>关于 react中<code>setState</code>是同步的还是异步</h3><p><strong>state是具有更新队列的，每次调用setState方法都会将当前修改的state放入此队列，react查询到当前setState方法执行完后，进行state数据的合并，合并后再去执行回调，根据合并结果再去执行更新VirtualDom，触发render周期</strong></p>
+<ul>
+<li><strong>a：</strong><code>setState</code> 只在合成事件和hook（）中是“异步”的，在<strong>原生事件和 setTimeout</strong> 中都是<strong>同步</strong>的。</li>
+<li><strong>b：</strong> <code>setState</code>的“异步”并不是说内部由异步代码实现，其实本身执行的过程和代码都是同步的，只是<strong>合成事件和hook（）的调用顺序在更新之前</strong>，导致在合成事件和钩子函数中没法立马拿到更新后的值，形式了所谓的“异步”，当然可以通过第二个参数 setState(partialState, <strong>callback</strong>) 拿到更新后的结果。</li>
+<li><strong>c：</strong> <code>setState</code> 的批量更新优化也是建立在“异步”（合成事件、hook（））之上的，<strong>在原生事件和setTimeout 中不会批量更新</strong>，在“异步”中如果对同一个值进行多次 <code>setState</code> ， <code>setState</code> 的批量更新策略会对其进行覆盖，取<strong>最后一次的执行</strong>，如果是同时 <code>setState</code> 多个不同的值，在更新时会<strong>对其进行合并批量更新</strong>。</li>
 </ul>
 <h3 id="react中如何获取input输入框的值"><a href="#react中如何获取input输入框的值" class="headerlink" title="react中如何获取input输入框的值"></a>react中如何获取input输入框的值</h3><p>以下为在类组件中方法</p>
 <ul>
@@ -1522,6 +1713,17 @@
 </ul>
 </li>
 </ul>
+<h3 id="react-事件绑定的原理"><a href="#react-事件绑定的原理" class="headerlink" title="react 事件绑定的原理"></a>react 事件绑定的原理</h3><p>react中的事件都是合成事件，不是把每一个dom的事件绑定在dom上，而是把事件统一绑定到document中，触发时通过事件冒泡到document进行触发合成事件，因为是合成事件，所以我们无法去使用e.stopPropagation去阻止，而是使用e.preventDefault去阻止。</p>
+<ul>
+<li><p>1.<strong>事件注册</strong>：组件更新或者装载时，在给dom增加合成事件时，需要将增加的target传入到document进行判断，给document注册原生事件回调为dispatchEvent(统一的事件分发机制)。</p>
+</li>
+<li><p>2.<strong>事件存储</strong>：EventPluginHub负责管理React合成事件的callback,它将callback存储到listennerBank中，另外还存储了负责合成事件的Plugin，Event存储到listennerbank中，每一个元素在listennerBank中会有唯一的key。</p>
+</li>
+<li><p>3.<strong>事件触发执行</strong>：点击时冒泡到docunment中，触发注册原生事件的回调dispatchEvent，获取到触发这个事件的最深层元素，事件执行利用react的批处理机制。<br> 案例</p>
+</li>
+<li><p>4.<strong>合成事件</strong>：循环所有类型的eventPlugin，对应每个事件类型，生成不同的事件池，如果是空，则生成新的，有则用之前的，根据唯一key获取到指定的回调函数，再返回带有参数的回调函数。</p>
+</li>
+</ul>
 <h3 id="受控组件与非受控组件"><a href="#受控组件与非受控组件" class="headerlink" title="受控组件与非受控组件"></a>受控组件与非受控组件</h3><ul>
 <li>受控组件<ul>
 <li>1、每当表单的状态发生变化时，都会被写入到组件的state中</li>
@@ -1534,6 +1736,32 @@
 <li>2、非受控组件是一种反模式，它的值不受组件自身的state或props控制</li>
 <li>3、通常需要为其添加ref prop来访问渲染后的底层DOM元素</li>
 </ul>
+</li>
+</ul>
+<h3 id="setstate在哪些生命周期可以无副作用使用"><a href="#setstate在哪些生命周期可以无副作用使用" class="headerlink" title="setstate在哪些生命周期可以无副作用使用"></a>setstate在哪些生命周期可以无副作用使用</h3><ul>
+<li><p>componentDidMount()</p>
+</li>
+<li><p>可以在<code>UNSAFE_componentWillReceiveProps</code>周期获取最新的props在通过setState更新组件状态。</p>
+</li>
+<li><p>在<code>componentDidUpdate</code>生命周期中setState会导致视图再次更新</p>
+<ul>
+<li>除非特殊业务需求，否则不建议在此生命周期中使用setState。</li>
+</ul>
+</li>
+</ul>
+<h3 id="props或state发生变化会触发哪些生命周期"><a href="#props或state发生变化会触发哪些生命周期" class="headerlink" title="props或state发生变化会触发哪些生命周期"></a>props或state发生变化会触发哪些生命周期</h3><ul>
+<li><p>UNSAFE_componentWillReceiveProps()</p>
+</li>
+<li><p>shouldComponentUpdate()</p>
+<ul>
+<li>它通过判断当前状态与之前状态来返回一个布尔值并决定是否更新视图，如果返回false视图始终不会更新。返回true就会更新视图</li>
+</ul>
+</li>
+<li><p>UNSAFE_componentWillUpdate()</p>
+</li>
+<li><p>render()</p>
+</li>
+<li><p>componentDidUpdate()</p>
 </li>
 </ul>
 <h3 id="react-thunk——中间件"><a href="#react-thunk——中间件" class="headerlink" title="react-thunk——中间件"></a>react-thunk——中间件</h3><p><code>redux-thunk</code>是作为<code>redux</code>的 middleware 存在的，用法和普通 middleware 的用法是一样的，注册 middleware 的代码如下：</p>
@@ -1594,6 +1822,9 @@
 </ol>
 </li>
 </ul>
+<h3 id="什么是高阶组件（-HOC）"><a href="#什么是高阶组件（-HOC）" class="headerlink" title="什么是高阶组件（ HOC）"></a>什么是高阶组件（ HOC）</h3><p>高阶组件是重用组件的逻辑的高级方法</p>
+<p>是一种源于React组件模式&lt;/pHOc是自定义组件,在他之内包含另一个</p>
+<p>可以接受子组件提供的任何动态，但不会修改或复制其输入组件的任意行为HOC==“干净”组件</p>
 <h1 id="其他技术"><a href="#其他技术" class="headerlink" title="其他技术"></a>其他技术</h1><h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><h4 id="git如何解决冲突"><a href="#git如何解决冲突" class="headerlink" title="git如何解决冲突"></a>git如何解决冲突</h4><ul>
 <li><p>在 Git 的响应中,可以看到存在冲突</p>
 </li>
@@ -1614,7 +1845,9 @@
 
 
 
-<h3 id="网络请求"><a href="#网络请求" class="headerlink" title="网络请求"></a>网络请求</h3><p>![img](file:///C:\Users\Administrator\Documents\Tencent Files\601539164\Image\Group2\0J\07\0J07]VA[1<del>P9TH32$BU`5</del>7.jpg)</p>
+<h2 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h2><h4 id="TCP-IP体系结构"><a href="#TCP-IP体系结构" class="headerlink" title="TCP/IP体系结构"></a>TCP/IP体系结构</h4><p><img src="https://img-blog.csdn.net/20171215000304120?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMjI0NjQ1NQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<h4 id="网络请求"><a href="#网络请求" class="headerlink" title="网络请求"></a>网络请求</h4><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/an-wen/p/11180076.html">https://www.cnblogs.com/an-wen/p/11180076.html</a></p>
+<p>![img](file:///C:\Users\Administrator\Documents\Tencent Files\601539164\Image\Group2\0J\07\0J07]VA[1<del>P9TH32$BU`5</del>7.jpg)</p>
 <p>promise练习题</p>
 <p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1627887951201.png" alt="1627887951201"></p>
 <p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1627887982769.png" alt="1627887982769"></p>
